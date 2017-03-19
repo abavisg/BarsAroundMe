@@ -8,7 +8,6 @@
 
 import Foundation
 
-protocol DataProvider {
-    associatedtype Model
-    func fetchResults(forURL url:URL, _ completion:@escaping (_ results: [Model]?, _ error: NSError?) -> Void)
+protocol DataProvider  {
+    func fetchResults(forURL url:URL, _ completion:@escaping (_ results: [Any]?, _ error: NSError?) -> Void)
 }

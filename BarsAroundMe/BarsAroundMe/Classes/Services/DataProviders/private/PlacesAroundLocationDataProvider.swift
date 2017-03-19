@@ -11,9 +11,7 @@ import SwiftyJSON
 
 class PlaceAroundLocationDataProvider:DataProvider {
 
-    typealias Model = Place
-
-    func fetchResults(forURL url: URL, _ completion: @escaping ([Place]?, NSError?) -> Void) {
+    func fetchResults(forURL url: URL, _ completion: @escaping ([Any]?, NSError?) -> Void) {
         
         let dataTask = URLSession.shared.dataTask(with: url) { (data, _, error) in
             
