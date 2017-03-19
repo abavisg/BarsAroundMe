@@ -13,6 +13,6 @@ protocol URLFactory {
     var basePath:String { get }
     var parameters:[String:Any] {get }
     
-    init(withBasePath basePath:String, andParameters parameters:[String:Any]?)
+    init(withBasePath basePath:String, andParameters parameters:[String:Any])
     func url()->URL
 }
