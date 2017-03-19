@@ -13,6 +13,7 @@
 		8C76C5BF1E7F40C100B26819 /* ListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5BE1E7F40C100B26819 /* ListCellViewModel.swift */; };
 		8C76C5C31E7F439400B26819 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5C21E7F439400B26819 /* TableViewCell.swift */; };
 		8C76C5C51E7F43E200B26819 /* ListCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5C41E7F43E200B26819 /* ListCellSpec.swift */; };
+		8C76C5C81E7F46BA00B26819 /* PlaceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5C71E7F46BA00B26819 /* PlaceListCell.swift */; };
 		8C9CC77F1E7ED4FE005D13A1 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CC77E1E7ED4FE005D13A1 /* ListViewController.swift */; };
 		8C9CC7811E7ED506005D13A1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CC7801E7ED506005D13A1 /* MapViewController.swift */; };
 		8C9CC7851E7EDE1C005D13A1 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CC7841E7EDE1C005D13A1 /* DataProvider.swift */; };
@@ -56,6 +57,7 @@
 		8C76C5BE1E7F40C100B26819 /* ListCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCellViewModel.swift; sourceTree = "<group>"; };
 		8C76C5C21E7F439400B26819 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8C76C5C41E7F43E200B26819 /* ListCellSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCellSpec.swift; sourceTree = "<group>"; };
+		8C76C5C71E7F46BA00B26819 /* PlaceListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceListCell.swift; sourceTree = "<group>"; };
 		8C9CC77E1E7ED4FE005D13A1 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		8C9CC7801E7ED506005D13A1 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8C9CC7841E7EDE1C005D13A1 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
@@ -118,8 +120,17 @@
 			isa = PBXGroup;
 			children = (
 				8C76C5C21E7F439400B26819 /* TableViewCell.swift */,
+				8C76C5C61E7F46A100B26819 /* private */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		8C76C5C61E7F46A100B26819 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				8C76C5C71E7F46BA00B26819 /* PlaceListCell.swift */,
+			);
+			path = private;
 			sourceTree = "<group>";
 		};
 		8C9CC77D1E7ED4D9005D13A1 /* ViewControllers */ = {
@@ -521,6 +532,7 @@
 				8CAA5A5D1E7EB6AD00D620C5 /* AppDelegate.swift in Sources */,
 				8CAA5A691E7EC23200D620C5 /* Place.swift in Sources */,
 				8C9CC7881E7EE5DB005D13A1 /* URLFactory.swift in Sources */,
+				8C76C5C81E7F46BA00B26819 /* PlaceListCell.swift in Sources */,
 				8C76C5BF1E7F40C100B26819 /* ListCellViewModel.swift in Sources */,
 				8C9CC79A1E7F2881005D13A1 /* ViewViewModel.swift in Sources */,
 				8C9CC7851E7EDE1C005D13A1 /* DataProvider.swift in Sources */,

@@ -24,13 +24,45 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="VOo-6R-5Fb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceListCell" rowHeight="50" id="VOo-6R-5Fb" customClass="PlaceListCell" customModule="BarsAroundMe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VOo-6R-5Fb" id="dou-3L-7QF">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4I0-hT-U74">
+                                                    <rect key="frame" x="10" y="-5" width="355" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="1Q2-fQ-whr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Opd-VA-gKz">
+                                                    <rect key="frame" x="10" y="17" width="355" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="KUQ-Te-ymB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Opd-VA-gKz" firstAttribute="top" secondItem="4I0-hT-U74" secondAttribute="bottom" id="Is3-Ig-e6Y"/>
+                                                <constraint firstItem="Opd-VA-gKz" firstAttribute="leading" secondItem="4I0-hT-U74" secondAttribute="leading" id="Pt5-Pn-sKF"/>
+                                                <constraint firstAttribute="top" secondItem="4I0-hT-U74" secondAttribute="top" constant="5" id="YBD-py-kZj"/>
+                                                <constraint firstItem="Opd-VA-gKz" firstAttribute="trailing" secondItem="4I0-hT-U74" secondAttribute="trailing" id="cDB-Hp-Afl"/>
+                                                <constraint firstAttribute="trailing" secondItem="4I0-hT-U74" secondAttribute="trailing" constant="10" id="gBh-1V-L6l"/>
+                                                <constraint firstItem="4I0-hT-U74" firstAttribute="leading" secondItem="dou-3L-7QF" secondAttribute="leading" constant="10" id="lPD-Q8-G4o"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="distanceLabel" destination="Opd-VA-gKz" id="qDv-nG-mWH"/>
+                                            <outlet property="nameLabel" destination="4I0-hT-U74" id="tpX-en-v6d"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

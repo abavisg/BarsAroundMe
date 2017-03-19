@@ -8,6 +8,7 @@
 
 import Quick
 import Nimble
+import CoreLocation
 @testable import BarsAroundMe
 
 class ListCellSpec: QuickSpec{
@@ -15,21 +16,28 @@ class ListCellSpec: QuickSpec{
     override func spec() {
         
         var cell:PlaceListCell?
-        var cellViewModel:ListCellViewModelMock = ListCellViewModelMock()
+
+        var place:Place?
+        place = MockData.place
+        var userCoordinates:CLLocationCoordinate2D?
+        userCoordinates = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+        let cellViewModel = ListCellViewModel(with: place!, coordinates: userCoordinates!)
         cellViewModel.setData()
         beforeEach {
+            
+            
             cell = self.makeCell()
         }
         
         describe("when configuring") {
             context("with a view model") {
                 it("nameLabel text should be the same as nameString") {
-                    cell.configure(cellViewModel)
-                    expect(cell.nameLabel.text).to(equal(cellViewModel.nameString))
+                    cell?.configure(with: cellViewModel)
+                    expect(cell?.nameLabel.text).toEventually(equal(cellViewModel.nameString))
                 }
                 it("distanceLabel text should be the same as distanceString") {
-                    cell.configure(cellViewModel)
-                    expect(cell.nameLabel.text).to(equal(cellViewModel.nameString))
+                    cell?.configure(with: cellViewModel)
+                    expect(cell?.nameLabel.text).toEventually(equal(cellViewModel.nameString))
                 }
 
             }
@@ -41,15 +49,5 @@ class ListCellSpec: QuickSpec{
         cell.nameLabel = UILabel()
         cell.distanceLabel = UILabel()
         return cell
-    }
-}
-
-private class ListCellViewModelMock: CellViewModel {
-    var nameString:String?
-    var distanceString:String?
-    
-    func setData(){
-        nameString = "Pyrmont Bridge Hotel"
-        distanceString = "1 km"
     }
 }

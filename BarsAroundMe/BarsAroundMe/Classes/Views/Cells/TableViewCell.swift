@@ -9,7 +9,8 @@
 import UIKit
 
 protocol TableViewCell {
-    func configure(with viewModel:CellViewModel)
+    associatedtype ViewModel
+    func configure(with viewModel:ViewModel)
 }
 
 protocol Reusable {
@@ -21,12 +22,6 @@ extension Reusable {
         return String(describing: self)
     }
 }
-
-protocol ConfigurableCell {
-    associatedtype Item
-    func configure(with item: Item)
-}
-
 
 
 
