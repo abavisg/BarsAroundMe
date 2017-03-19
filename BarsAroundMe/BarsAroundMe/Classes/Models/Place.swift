@@ -6,6 +6,7 @@
 //  Copyright © 2017 Giorgos Ampavis. All rights reserved.
 //
 import Foundation
+import SwiftyJSON
 
 public struct Place {
     
@@ -25,11 +26,11 @@ public struct Place {
     public var latitude: Double?
     public var longitude: Double?
     
-    public init(withData data: [String:Any]) {
-        self.name = data[SerializationKeys.name] as? String
-        self.id = data[SerializationKeys.id] as? String
-        self.placeID = data[SerializationKeys.placeID] as? String
-        self.latitude = data[SerializationKeys.latitude] as? Double
-        self.longitude = data[SerializationKeys.longitude] as? Double
+    public init(withJSON json: JSON) {
+        self.name = json[SerializationKeys.name].string
+        self.id = json[SerializationKeys.id].string
+        self.placeID = json[SerializationKeys.placeID].string
+        self.latitude = json[SerializationKeys.latitude].double
+        self.longitude = json[SerializationKeys.longitude].double
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 @testable import BarsAroundMe
 
 struct MockData{
@@ -107,25 +108,33 @@ struct MockData{
             
         ]
         
-        private static let place1:Place = Place(withData: ["name": "Flying Fish Restaurant & Bar",
-                                   "id": "05bf6e9aa18b35f174f5076c348ce8e91e328aba",
-                                   "place_id": "ChIJm7Ex8UmuEmsR37p4Hm0D0VI",
-                                   "latitude": -33.8627642,
-                                   "longitude": 151.1951861
-        ])
-        private static let place2:Place = Place(withData: ["name": "Pyrmont Bridge Hotel",
-                                   "id": "c2075046e4cb0763631f4d8a562f88fe8500ba25",
-                                   "place_id": "ChIJAzQBQzeuEmsRh4OdJApC4MU",
-                                   "latitude": -33.8698537,
-                                   "longitude": 151.1977208
-        ])
+        private static let json1:JSON = ["name": "Flying Fish Restaurant & Bar",
+                                                           "id": "05bf6e9aa18b35f174f5076c348ce8e91e328aba",
+                                                           "place_id": "ChIJm7Ex8UmuEmsR37p4Hm0D0VI",
+                                                           "latitude": -33.8627642,
+                                                           "longitude": 151.1951861
+        ]
+        private static let place1:Place = Place(withJSON: json1)
+        private static let json2:JSON = ["name": "Pyrmont Bridge Hotel",
+                                                           "id": "c2075046e4cb0763631f4d8a562f88fe8500ba25",
+                                                           "place_id": "ChIJAzQBQzeuEmsRh4OdJApC4MU",
+                                                           "latitude": -33.8698537,
+                                                           "longitude": 151.1977208
+            ]
+        private static let place2:Place = Place(withJSON: json2)
         static let places: [Place] = [place1, place2]
     }
     
     struct placesAroundLocationResponseWithNoData {
-        
+        static let responseData: [AnyHashable: Any] = [
+            "html_attributions" : [],
+            "next_page_token" : "CoQCAAEAAFX5ePdqojtvmDuzuQb8uEH33-QB2Cvy9BVWDWOK4BGvL6ZXPVUOkyHNQjrnW2qHhwRnYW26s8mf5IiQMwPZ9ljyR1m3jwr0I090t5UhbenKZp48wT8kVA3Ozd72BKM_2ILMamoa7aBcbcDQW1-3ngfpORxLfpVZruSE2kPHKerWCK831SOoZr7AyWwEABPNJUggX2_ZiwzJXMnaW-u2k9rU6E0S0FVknu0PzNbOwaUUu36WeK5bivBvkjW2sJY8ImJapGArIFctY94GsoeAMbIh0rTqlbNKlm1HT7mh5HElxqkX3r6UxA1zmYJbrsI4TXjvnJowcwlyVU1VYVEmEc4SEDG8uriQcRCFiHJnVMTjjrsaFIho10Z2Pop3n41D7P-GWkMsu2BY",
+            "results" : [],
+            "status" : "OK"
+            
+        ]
+        static let places: [Place] = [Place]()
+
     }
-    
-    
 
 }

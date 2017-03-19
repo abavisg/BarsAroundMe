@@ -9,5 +9,6 @@
 import Foundation
 
 protocol DataProvider {
-    func fetchResults<Model>(forURL url:URL, _ completion:(_ results: [Model]?, _ error: NSError?) -> Void)
+    associatedtype Model
+    func fetchResults(forURL url:URL, _ completion:@escaping (_ results: [Model]?, _ error: NSError?) -> Void)
 }

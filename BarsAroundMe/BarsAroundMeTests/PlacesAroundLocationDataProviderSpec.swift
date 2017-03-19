@@ -27,10 +27,33 @@ class PlaceAroundLocationDataProviderSpec : QuickSpec{
         describe("when fetchResults") {
             context("with a valid response of 2 items") {
                 it("should return the expected result") {
+                    let body = MockData.placesAroundLocationResponseWithData.responseData
+                    self.stub(http(.get, uri: "https://mock-url.com/service"), json(body))
+                    
                     let expectedResult = MockData.placesAroundLocationResponseWithData.places
-                    self.stub(uri("https://mock-url.com/service"), json(MockData.placesAroundLocationResponseWithData.responseData))
                     var places = [Place]()
 
+                    dataProvider.fetchResults(forURL: (urlFactory?.url())!, { (  results:[Place]?, error) in
+                        guard error == nil else{
+                            return
+                        }
+                        if let results = results {
+                            places = results
+                        }
+                    })
+                    expect(places.count).toEventually(equal(expectedResult.count))
+                }
+            }
+        }
+        describe("when fetchResults") {
+            context("with a valid response of 0 items") {
+                it("should return the expected result") {
+                    let body = MockData.placesAroundLocationResponseWithNoData.responseData
+                    self.stub(http(.get, uri: "https://mock-url.com/service"), json(body))
+                    
+                    let expectedResult = MockData.placesAroundLocationResponseWithNoData.places
+                    var places = [Place]()
+                    
                     dataProvider.fetchResults(forURL: (urlFactory?.url())!, { (  results:[Place]?, error) in
                         guard error == nil else{
                             return
