@@ -11,7 +11,7 @@ import Nimble
 import CoreLocation
 @testable import BarsAroundMe
 
-class ViewViewModelSpec: QuickSpec{
+class ListViewModelSpec: QuickSpec{
     
     override func spec() {
         

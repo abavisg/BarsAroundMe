@@ -12,6 +12,8 @@ import SwiftyJSON
 
 struct MockData{
     
+    //MARK - Places Around Location With 2 Data
+    
     struct placesAroundLocationResponseWithData {
         static let responseData: [AnyHashable: Any] = [
             "html_attributions" : [],
@@ -125,6 +127,8 @@ struct MockData{
         static let places: [Place] = [place1, place2]
     }
     
+    //MARK - Places Around Location With No Data
+    
     struct placesAroundLocationResponseWithNoData {
         static let responseData: [AnyHashable: Any] = [
             "html_attributions" : [],
@@ -136,5 +140,15 @@ struct MockData{
         static let places: [Place] = [Place]()
 
     }
+    
+    //MARK - Single Place
+    
+    private static let json:JSON = ["name": "Flying Fish Restaurant & Bar",
+                                     "id": "05bf6e9aa18b35f174f5076c348ce8e91e328aba",
+                                     "place_id": "ChIJm7Ex8UmuEmsR37p4Hm0D0VI",
+                                     "latitude": -33.8627642,
+                                     "longitude": 151.1951861
+    ]
+    static let place:Place = Place(withJSON: json)
 
 }
