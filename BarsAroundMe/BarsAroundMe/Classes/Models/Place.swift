@@ -15,4 +15,5 @@ public struct Place {
     public var placeID: String?
     public var latitude: Float?
     public var longitude: Float?
+    
 }

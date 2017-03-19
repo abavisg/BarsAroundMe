@@ -24,25 +24,25 @@ class PlaceModelsTests: QuickSpec {
                 let data = self.placeData()
                 let id:String = data["id"] as! String
                 let item = Place(withData: data)
-                expect(item.name).to(equal(id))
+                expect(item.id).to(equal(id))
             }
             it("should populate the placeID property") {
                 let data = self.placeData()
                 let placeID:String = data["placeID"] as! String
                 let item = Place(withData: data)
-                expect(item.name).to(equal(placeID))
+                expect(item.placeID).to(equal(placeID))
             }
             it("should populate the latitude property") {
                 let data = self.placeData()
-                let latitude:String = data["latitude"] as! String
+                let latitude:Double = data["latitude"] as! Double
                 let item = Place(withData: data)
-                expect(item.name).to(equal(latitude))
+                expect(item.latitude).to(equal(latitude))
             }
             it("should populate the longitude property") {
                 let data = self.placeData()
-                let longitude:String = data["longitude"] as! String
+                let longitude:Double = data["longitude"] as! Double
                 let item = Place(withData: data)
-                expect(item.name).to(equal(longitude))
+                expect(item.longitude).to(equal(longitude))
             }
         }
     }
