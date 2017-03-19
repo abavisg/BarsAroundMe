@@ -27,20 +27,14 @@ class ListCellViewModelSpec: QuickSpec{
         describe("when initialising") {
             context("with a place") {
                 it("name string should be as configured") {
-                    cellViewModel = ListCellViewModel(place, userCoordinates)
-                    expect(cellViewModel.nameString).to(equal(place.name))
-                }
-                it("latitude string should be as configured") {
-                    cellViewModel = ListCellViewModel(place, userCoordinates)
-                    expect(cellViewModel.latitudeString).to(equal(place.latitude))
-                }
-                it("longitude string should be as configured") {
-                    cellViewModel = ListCellViewModel(place, userCoordinates)
-                    expect(cellViewModel.longitudeString).to(equal(place.longitude))
+                    cellViewModel = ListCellViewModel(with: place!, coordinates: userCoordinates!)
+                    expect(cellViewModel?.nameString).to(equal(place?.name))
                 }
                 it("distanceString string should be as configured") {
-                    cellViewModel = ListCellViewModel(place, userCoordinates)
-                    expect(cellViewModel.longitudeString).to(equal(place.longitude))
+                    let expectedResult = "1 km"
+                    
+                    cellViewModel = ListCellViewModel(with: place!, coordinates: userCoordinates!)
+                    expect(cellViewModel?.distanceString).to(equal(expectedResult))
                 }
             }
         }

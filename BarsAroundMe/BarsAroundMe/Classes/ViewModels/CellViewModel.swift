@@ -10,6 +10,5 @@ import Foundation
 import CoreLocation
 
 protocol CellViewModel{
-    init(with place:Place, coordinates:CLLocationCoordinate2D)
     func setData()
 }
