@@ -8,6 +8,9 @@ PODS:
     - Mockingjay/Core
   - Nimble (6.0.1)
   - Quick (1.1.0)
+  - RxCocoa (3.3.1):
+    - RxSwift (~> 3.3)
+  - RxSwift (3.3.1)
   - SwiftyJSON (3.1.4)
   - URITemplate (2.0.0)
 
@@ -15,15 +18,19 @@ DEPENDENCIES:
   - Mockingjay (~> 2.0)
   - Nimble (~> 6.0)
   - Quick (~> 1.0)
+  - RxCocoa (~> 3.0)
+  - RxSwift (~> 3.0)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Mockingjay: 7122a3fc0597aa63438e4cd9b71b7bc8aac05b87
   Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+  RxCocoa: 7dcb7a1860fc9cd0e23dae67ab105fc2916670b6
+  RxSwift: 8fc9f2de6275a9101d518444e00bf32f1a42caac
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   URITemplate: a5acb3f76c6a2338116fde88b658d83f91bbac45
 
-PODFILE CHECKSUM: 77cf95024660cb82355d2e736c214c1a3584df67
+PODFILE CHECKSUM: 5fdbcc40f2ff50f38830a0c94342554ff4143c0a
 
 COCOAPODS: 1.2.0

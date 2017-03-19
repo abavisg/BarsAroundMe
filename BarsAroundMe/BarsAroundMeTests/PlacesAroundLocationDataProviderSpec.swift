@@ -33,12 +33,12 @@ class PlaceAroundLocationDataProviderSpec : QuickSpec{
                     let expectedResult = MockData.placesAroundLocationResponseWithData.places
                     var places = [Place]()
 
-                    dataProvider.fetchResults(forURL: (urlFactory?.url())!, { (  results:[Place]?, error) in
+                    dataProvider.fetchResults(forURL: (urlFactory?.url())!, { (  results:[Any]?, error) in
                         guard error == nil else{
                             return
                         }
                         if let results = results {
-                            places = results
+                            places = results as! [Place]
                         }
                     })
                     expect(places.count).toEventually(equal(expectedResult.count))
@@ -54,12 +54,12 @@ class PlaceAroundLocationDataProviderSpec : QuickSpec{
                     let expectedResult = MockData.placesAroundLocationResponseWithNoData.places
                     var places = [Place]()
                     
-                    dataProvider.fetchResults(forURL: (urlFactory?.url())!, { (  results:[Place]?, error) in
+                    dataProvider.fetchResults(forURL: (urlFactory?.url())!, { (  results:[Any]?, error) in
                         guard error == nil else{
                             return
                         }
                         if let results = results {
-                            places = results
+                            places = results as! [Place]
                         }
                     })
                     expect(places.count).toEventually(equal(expectedResult.count))

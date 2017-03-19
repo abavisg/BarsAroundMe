@@ -7,11 +7,11 @@
 //
 
 import Foundation
+import CoreLocation
 
 protocol ViewViewModel{
-    var places:[Place]?{get}
-    init(withDataPrvider:DataProvider)
-    func refresh()
+    init(withDataProvider dataProvider:DataProvider)
+    func refresh(withCoordinates coordinates:CLLocationCoordinate2D)
     func itemAtIndexPath(indexPath:IndexPath)->Any
     
 }
