@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C9CC77F1E7ED4FE005D13A1 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CC77E1E7ED4FE005D13A1 /* ListViewController.swift */; };
+		8C9CC7811E7ED506005D13A1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CC7801E7ED506005D13A1 /* MapViewController.swift */; };
 		8CAA5A351E7EB4C400D620C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA5A331E7EB4C400D620C5 /* Main.storyboard */; };
 		8CAA5A3A1E7EB4C400D620C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA5A381E7EB4C400D620C5 /* LaunchScreen.storyboard */; };
 		8CAA5A561E7EB5FE00D620C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA5A551E7EB5FE00D620C5 /* Images.xcassets */; };
 		8CAA5A581E7EB62800D620C5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA5A571E7EB62800D620C5 /* Info.plist */; };
 		8CAA5A5D1E7EB6AD00D620C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAA5A5A1E7EB6AD00D620C5 /* AppDelegate.swift */; };
-		8CAA5A5E1E7EB6AD00D620C5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAA5A5B1E7EB6AD00D620C5 /* FirstViewController.swift */; };
-		8CAA5A5F1E7EB6AD00D620C5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAA5A5C1E7EB6AD00D620C5 /* SecondViewController.swift */; };
 		8CAA5A691E7EC23200D620C5 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAA5A681E7EC23200D620C5 /* Place.swift */; };
 		8CAA5A6B1E7EC30D00D620C5 /* PlaceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAA5A6A1E7EC30D00D620C5 /* PlaceModelTests.swift */; };
 		9D009EE7670719D912AF990F /* Pods_BarsAroundMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D985FBC798FBB6C97D98A853 /* Pods_BarsAroundMeTests.framework */; };
@@ -33,6 +33,8 @@
 /* Begin PBXFileReference section */
 		353C3D46F2F845C6381C54AD /* Pods_BarsAroundMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarsAroundMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D5CA1E7B2926DDAB4A398F /* Pods-BarsAroundMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarsAroundMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarsAroundMeTests/Pods-BarsAroundMeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8C9CC77E1E7ED4FE005D13A1 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		8C9CC7801E7ED506005D13A1 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8CAA5A2A1E7EB4C400D620C5 /* BarsAroundMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarsAroundMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAA5A341E7EB4C400D620C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8CAA5A391E7EB4C400D620C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,8 +43,6 @@
 		8CAA5A551E7EB5FE00D620C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8CAA5A571E7EB62800D620C5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CAA5A5A1E7EB6AD00D620C5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8CAA5A5B1E7EB6AD00D620C5 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		8CAA5A5C1E7EB6AD00D620C5 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		8CAA5A681E7EC23200D620C5 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		8CAA5A6A1E7EC30D00D620C5 /* PlaceModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceModelTests.swift; sourceTree = "<group>"; };
 		AE9F651ED445DAD56AC0A5DA /* Pods-BarsAroundMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarsAroundMeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarsAroundMeTests/Pods-BarsAroundMeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C9CC77D1E7ED4D9005D13A1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8C9CC77E1E7ED4FE005D13A1 /* ListViewController.swift */,
+				8C9CC7801E7ED506005D13A1 /* MapViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		8CAA5A211E7EB4C400D620C5 = {
 			isa = PBXGroup;
 			children = (
@@ -132,9 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				8CAA5A671E7EC23200D620C5 /* Models */,
+				8C9CC77D1E7ED4D9005D13A1 /* ViewControllers */,
 				8CAA5A5A1E7EB6AD00D620C5 /* AppDelegate.swift */,
-				8CAA5A5B1E7EB6AD00D620C5 /* FirstViewController.swift */,
-				8CAA5A5C1E7EB6AD00D620C5 /* SecondViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -372,10 +380,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CAA5A5F1E7EB6AD00D620C5 /* SecondViewController.swift in Sources */,
-				8CAA5A5E1E7EB6AD00D620C5 /* FirstViewController.swift in Sources */,
 				8CAA5A5D1E7EB6AD00D620C5 /* AppDelegate.swift in Sources */,
 				8CAA5A691E7EC23200D620C5 /* Place.swift in Sources */,
+				8C9CC77F1E7ED4FE005D13A1 /* ListViewController.swift in Sources */,
+				8C9CC7811E7ED506005D13A1 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
