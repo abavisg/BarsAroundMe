@@ -7,3 +7,8 @@
 //
 
 import Foundation
+import CoreLocation
+
+protocol ViewViewModel{
+    func update(with place:Place, coordinates:CLLocationCoordinate2D)
+}
