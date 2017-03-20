@@ -11,6 +11,7 @@
 		8C6FC4E61E7FEB6300CC10E4 /* MapViewViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC4E51E7FEB6300CC10E4 /* MapViewViewModelSpec.swift */; };
 		8C6FC4E81E7FECDF00CC10E4 /* MapViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC4E71E7FECDF00CC10E4 /* MapViewViewModel.swift */; };
 		8C6FC4EA1E7FED7000CC10E4 /* MapViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC4E91E7FED7000CC10E4 /* MapViewControllerSpec.swift */; };
+		8C6FC4EE1E7FF77000CC10E4 /* PointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC4ED1E7FF77000CC10E4 /* PointAnnotation.swift */; };
 		8C76C5B91E7F398200B26819 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C76C5B81E7F398200B26819 /* CoreLocation.framework */; };
 		8C76C5BB1E7F3B9A00B26819 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5BA1E7F3B9A00B26819 /* CellViewModel.swift */; };
 		8C76C5BD1E7F3C0000B26819 /* PlaceListCellViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5BC1E7F3C0000B26819 /* PlaceListCellViewModelSpec.swift */; };
@@ -59,6 +60,7 @@
 		8C6FC4E51E7FEB6300CC10E4 /* MapViewViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewViewModelSpec.swift; sourceTree = "<group>"; };
 		8C6FC4E71E7FECDF00CC10E4 /* MapViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewViewModel.swift; sourceTree = "<group>"; };
 		8C6FC4E91E7FED7000CC10E4 /* MapViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewControllerSpec.swift; sourceTree = "<group>"; };
+		8C6FC4ED1E7FF77000CC10E4 /* PointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointAnnotation.swift; sourceTree = "<group>"; };
 		8C76C5B81E7F398200B26819 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8C76C5BA1E7F3B9A00B26819 /* CellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		8C76C5BC1E7F3C0000B26819 /* PlaceListCellViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceListCellViewModelSpec.swift; sourceTree = "<group>"; };
@@ -116,6 +118,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C6FC4EC1E7FF75B00CC10E4 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				8C6FC4ED1E7FF77000CC10E4 /* PointAnnotation.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		8C76C5C01E7F437A00B26819 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +302,7 @@
 		8CAA5A591E7EB6AD00D620C5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8C6FC4EC1E7FF75B00CC10E4 /* Map */,
 				8C9CC7821E7EDDCB005D13A1 /* Services */,
 				8CAA5A671E7EC23200D620C5 /* Models */,
 				8C9CC7981E7F2863005D13A1 /* ViewModels */,
@@ -542,6 +553,7 @@
 				8C9CC79F1E7F3102005D13A1 /* ListViewViewModel.swift in Sources */,
 				8C9CC78E1E7EE693005D13A1 /* PlacesAroundLocationDataProvider.swift in Sources */,
 				8C76C5BB1E7F3B9A00B26819 /* CellViewModel.swift in Sources */,
+				8C6FC4EE1E7FF77000CC10E4 /* PointAnnotation.swift in Sources */,
 				8CAA5A5D1E7EB6AD00D620C5 /* AppDelegate.swift in Sources */,
 				8CAA5A691E7EC23200D620C5 /* Place.swift in Sources */,
 				8C9CC7881E7EE5DB005D13A1 /* URLFactory.swift in Sources */,

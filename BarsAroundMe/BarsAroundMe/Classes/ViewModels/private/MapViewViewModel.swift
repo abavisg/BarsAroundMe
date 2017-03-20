@@ -45,8 +45,8 @@ final class MapViewViewModel: ViewViewModel{
     
     //MARK: - Actions
     
-    func tappedItem(at indexPath:IndexPath){
-        let place = self.itemAtIndexPath(indexPath: indexPath) as? Place
+    func tappedPin(with place:Place){
+        
         
     }
     

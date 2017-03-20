@@ -110,6 +110,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="G7i-Ba-SvW"/>
+                    <connections>
+                        <outlet property="mapView" destination="zmz-0z-frk" id="sFj-kg-Z7l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
