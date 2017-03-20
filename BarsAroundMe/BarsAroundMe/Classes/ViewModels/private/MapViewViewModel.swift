@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import CoreLocation
 
-final class MapViewViewModel: ViewViewModel{
+final class MapViewViewModel: ViewControllerViewModel{
     
     fileprivate let disposeBag = DisposeBag()
     

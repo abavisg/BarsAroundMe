@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import CoreLocation
 
-final class ListViewViewModel: ViewViewModel{
+final class ListViewViewModel: ViewControllerViewModel{
     
     fileprivate let disposeBag = DisposeBag()
     
