@@ -16,13 +16,9 @@ class CalloutViewSpec: QuickSpec{
     override func spec() {
         
         var view:CalloutView?
-        
-        var place:Place?
-        place = MockData.place
-        var userCoordinates:CLLocationCoordinate2D?
-        userCoordinates = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+        let place = MockData.place
         let viewModel = CalloutViewViewModel()
-        viewModel.update(with: place!, coordinates: userCoordinates!)
+        viewModel.update(with: place)
       
         beforeEach {
             
@@ -45,7 +41,6 @@ class CalloutViewSpec: QuickSpec{
     }
     
     private func makeCell() -> CalloutView {
-        let cell = CalloutView()
         let views = Bundle.main.loadNibNamed("CalloutView", owner: nil, options: nil)
         let calloutView = views?[0] as! CalloutView
         return calloutView

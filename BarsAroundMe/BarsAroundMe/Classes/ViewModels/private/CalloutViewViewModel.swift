@@ -15,15 +15,13 @@ class CalloutViewViewModel: ViewViewModel{
     var distanceString:String?
     
     var place:Place?
-    var coordinates:CLLocationCoordinate2D?
     
     init() {
         
     }
     
-    func update(with place:Place, coordinates:CLLocationCoordinate2D){
+    func update(with place:Place){
         self.place = place
-        self.coordinates = coordinates
     
         nameString = place.name
         distanceString = "1 km"

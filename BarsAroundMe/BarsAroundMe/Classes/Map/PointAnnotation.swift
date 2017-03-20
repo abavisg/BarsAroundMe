@@ -8,9 +8,8 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class PointAnnotation: MKPointAnnotation {
-    
-    var placeName:String?
-    var distanceFromUser:String?
+    var place:Place?
 }

@@ -20,6 +20,9 @@ class MapViewController: UIViewController {
     
     var viewModel:MapViewViewModel?
     
+    var calloutView:CalloutView?
+    var calloutViewViewModel:CalloutViewViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,8 +51,7 @@ class MapViewController: UIViewController {
                 let place = places[i]
                 let annotation = PointAnnotation()
                 annotation.coordinate = CLLocationCoordinate2D(latitude: place.latitude!, longitude: place.longitude!)
-                annotation.placeName = place.name
-                annotation.distanceFromUser = "1 km"
+                annotation.place = place
                 annotations.append(annotation)
             }
             self.mapView.showAnnotations(annotations, animated: true)
@@ -63,12 +65,24 @@ extension MapViewController:  MKMapViewDelegate{
         guard !(view.annotation is MKUserLocation) else{
             return
         }
-        let annotation = view.annotation as! PointAnnotation
-        let views = Bundle.main.loadNibNamed("CalloutView", owner: nil, options: nil)
-        let calloutView = views?[0] as! CalloutView
-
-        calloutView.center = CGPoint(x: view.bounds.size.width / 2, y: -calloutView.bounds.size.height*0.52)
-        view.addSubview(calloutView)
+        guard let annotation = view.annotation as? PointAnnotation, let place = annotation.place else {
+            return
+        }
+        if calloutViewViewModel == nil {
+            calloutViewViewModel = CalloutViewViewModel()
+        }
+        calloutViewViewModel?.update(with: place)
+        
+        if calloutView == nil {
+            let views = Bundle.main.loadNibNamed("CalloutView", owner: nil, options: nil)
+            calloutView = views?[0] as? CalloutView
+        }else{
+            calloutView?.removeFromSuperview()
+            
+        }
+        calloutView?.center = CGPoint(x: view.bounds.size.width / 2, y: -((calloutView?.bounds.size.height)!*0.52))
+        calloutView?.update(with: calloutViewViewModel!)
+        view.addSubview(calloutView!)
         mapView.setCenter((view.annotation?.coordinate)!, animated: true)
     }
 }
