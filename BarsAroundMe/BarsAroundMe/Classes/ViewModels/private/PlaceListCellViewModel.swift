@@ -1,5 +1,5 @@
 //
-//  ListCellViewModel.swift
+//  PlaceListCellViewModel.swift
 //  BarsAroundMe
 //
 //  Created by Giorgos Ampavis on 19/03/2017.
@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-class ListCellViewModel: CellViewModel{
+class PlaceListCellViewModel: CellViewModel{
     
     var nameString:String?
     var distanceString:String?

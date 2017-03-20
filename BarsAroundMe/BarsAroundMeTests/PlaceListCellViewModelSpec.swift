@@ -1,5 +1,5 @@
 //
-//  CellViewModelSpec.swift
+//  PlaceListCellViewModelSpec.swift
 //  BarsAroundMe
 //
 //  Created by Giorgos Ampavis on 19/03/2017.
@@ -11,11 +11,11 @@ import Nimble
 import CoreLocation
 @testable import BarsAroundMe
 
-class ListCellViewModelSpec: QuickSpec{
+class PlaceListCellViewModelSpec: QuickSpec{
     
     override func spec() {
         
-        var cellViewModel:ListCellViewModel?
+        var cellViewModel:PlaceListCellViewModel?
         var place:Place?
         var userCoordinates:CLLocationCoordinate2D?
         beforeEach {
@@ -27,13 +27,13 @@ class ListCellViewModelSpec: QuickSpec{
         describe("when initialising") {
             context("with a place") {
                 it("name string should be as configured") {
-                    cellViewModel = ListCellViewModel(with: place!, coordinates: userCoordinates!)
+                    cellViewModel = PlaceListCellViewModel(with: place!, coordinates: userCoordinates!)
                     expect(cellViewModel?.nameString).to(equal(place?.name))
                 }
                 it("distanceString string should be as configured") {
                     let expectedResult = "1 km"
                     
-                    cellViewModel = ListCellViewModel(with: place!, coordinates: userCoordinates!)
+                    cellViewModel = PlaceListCellViewModel(with: place!, coordinates: userCoordinates!)
                     expect(cellViewModel?.distanceString).to(equal(expectedResult))
                 }
             }

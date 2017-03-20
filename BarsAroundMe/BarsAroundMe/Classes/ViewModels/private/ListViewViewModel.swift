@@ -1,5 +1,5 @@
 //
-//  ListViewModel.swift
+//  ListViewViewModel.swift
 //  BarsAroundMe
 //
 //  Created by Giorgos Ampavis on 19/03/2017.
@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import CoreLocation
 
-final class ListViewModel: ViewViewModel{
+final class ListViewViewModel: ViewViewModel{
     
     fileprivate let disposeBag = DisposeBag()
     

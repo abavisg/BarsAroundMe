@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8C6FC4E41E7FD50000CC10E4 /* ListViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC4E31E7FD50000CC10E4 /* ListViewControllerSpec.swift */; };
+		8C6FC4E61E7FEB6300CC10E4 /* MapViewViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC4E51E7FEB6300CC10E4 /* MapViewViewModelSpec.swift */; };
 		8C76C5B91E7F398200B26819 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C76C5B81E7F398200B26819 /* CoreLocation.framework */; };
 		8C76C5BB1E7F3B9A00B26819 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5BA1E7F3B9A00B26819 /* CellViewModel.swift */; };
-		8C76C5BD1E7F3C0000B26819 /* ListCellViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5BC1E7F3C0000B26819 /* ListCellViewModelSpec.swift */; };
-		8C76C5BF1E7F40C100B26819 /* ListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5BE1E7F40C100B26819 /* ListCellViewModel.swift */; };
+		8C76C5BD1E7F3C0000B26819 /* PlaceListCellViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5BC1E7F3C0000B26819 /* PlaceListCellViewModelSpec.swift */; };
+		8C76C5BF1E7F40C100B26819 /* PlaceListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5BE1E7F40C100B26819 /* PlaceListCellViewModel.swift */; };
 		8C76C5C31E7F439400B26819 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5C21E7F439400B26819 /* TableViewCell.swift */; };
 		8C76C5C51E7F43E200B26819 /* ListCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5C41E7F43E200B26819 /* ListCellSpec.swift */; };
 		8C76C5C81E7F46BA00B26819 /* PlaceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5C71E7F46BA00B26819 /* PlaceListCell.swift */; };
@@ -26,8 +27,8 @@
 		8C9CC7941E7EF920005D13A1 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CC7931E7EF920005D13A1 /* MockData.swift */; };
 		8C9CC7971E7F16E3005D13A1 /* ResponseWithData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C9CC7961E7F16E3005D13A1 /* ResponseWithData.json */; };
 		8C9CC79A1E7F2881005D13A1 /* ViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CC7991E7F2881005D13A1 /* ViewViewModel.swift */; };
-		8C9CC79C1E7F28A6005D13A1 /* ListViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CC79B1E7F28A6005D13A1 /* ListViewModelSpec.swift */; };
-		8C9CC79F1E7F3102005D13A1 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CC79E1E7F3102005D13A1 /* ListViewModel.swift */; };
+		8C9CC79C1E7F28A6005D13A1 /* ListViewViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CC79B1E7F28A6005D13A1 /* ListViewViewModelSpec.swift */; };
+		8C9CC79F1E7F3102005D13A1 /* ListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CC79E1E7F3102005D13A1 /* ListViewViewModel.swift */; };
 		8CAA5A351E7EB4C400D620C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA5A331E7EB4C400D620C5 /* Main.storyboard */; };
 		8CAA5A3A1E7EB4C400D620C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA5A381E7EB4C400D620C5 /* LaunchScreen.storyboard */; };
 		8CAA5A561E7EB5FE00D620C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CAA5A551E7EB5FE00D620C5 /* Images.xcassets */; };
@@ -53,10 +54,11 @@
 		353C3D46F2F845C6381C54AD /* Pods_BarsAroundMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarsAroundMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D5CA1E7B2926DDAB4A398F /* Pods-BarsAroundMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarsAroundMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarsAroundMeTests/Pods-BarsAroundMeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8C6FC4E31E7FD50000CC10E4 /* ListViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewControllerSpec.swift; sourceTree = "<group>"; };
+		8C6FC4E51E7FEB6300CC10E4 /* MapViewViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewViewModelSpec.swift; sourceTree = "<group>"; };
 		8C76C5B81E7F398200B26819 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8C76C5BA1E7F3B9A00B26819 /* CellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
-		8C76C5BC1E7F3C0000B26819 /* ListCellViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCellViewModelSpec.swift; sourceTree = "<group>"; };
-		8C76C5BE1E7F40C100B26819 /* ListCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCellViewModel.swift; sourceTree = "<group>"; };
+		8C76C5BC1E7F3C0000B26819 /* PlaceListCellViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceListCellViewModelSpec.swift; sourceTree = "<group>"; };
+		8C76C5BE1E7F40C100B26819 /* PlaceListCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceListCellViewModel.swift; sourceTree = "<group>"; };
 		8C76C5C21E7F439400B26819 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8C76C5C41E7F43E200B26819 /* ListCellSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCellSpec.swift; sourceTree = "<group>"; };
 		8C76C5C71E7F46BA00B26819 /* PlaceListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceListCell.swift; sourceTree = "<group>"; };
@@ -71,8 +73,8 @@
 		8C9CC7931E7EF920005D13A1 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		8C9CC7961E7F16E3005D13A1 /* ResponseWithData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ResponseWithData.json; sourceTree = "<group>"; };
 		8C9CC7991E7F2881005D13A1 /* ViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewViewModel.swift; sourceTree = "<group>"; };
-		8C9CC79B1E7F28A6005D13A1 /* ListViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModelSpec.swift; sourceTree = "<group>"; };
-		8C9CC79E1E7F3102005D13A1 /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		8C9CC79B1E7F28A6005D13A1 /* ListViewViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewViewModelSpec.swift; sourceTree = "<group>"; };
+		8C9CC79E1E7F3102005D13A1 /* ListViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewViewModel.swift; sourceTree = "<group>"; };
 		8CAA5A2A1E7EB4C400D620C5 /* BarsAroundMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarsAroundMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAA5A341E7EB4C400D620C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8CAA5A391E7EB4C400D620C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -209,8 +211,8 @@
 		8C9CC79D1E7F30F2005D13A1 /* private */ = {
 			isa = PBXGroup;
 			children = (
-				8C9CC79E1E7F3102005D13A1 /* ListViewModel.swift */,
-				8C76C5BE1E7F40C100B26819 /* ListCellViewModel.swift */,
+				8C9CC79E1E7F3102005D13A1 /* ListViewViewModel.swift */,
+				8C76C5BE1E7F40C100B26819 /* PlaceListCellViewModel.swift */,
 			);
 			path = private;
 			sourceTree = "<group>";
@@ -253,8 +255,9 @@
 				8CAA5A6A1E7EC30D00D620C5 /* PlaceModelTests.swift */,
 				8C9CC78F1E7EE6FA005D13A1 /* PlacesAroundLocationURLFactorySpec.swift */,
 				8C9CC7911E7EF50B005D13A1 /* PlacesAroundLocationDataProviderSpec.swift */,
-				8C9CC79B1E7F28A6005D13A1 /* ListViewModelSpec.swift */,
-				8C76C5BC1E7F3C0000B26819 /* ListCellViewModelSpec.swift */,
+				8C9CC79B1E7F28A6005D13A1 /* ListViewViewModelSpec.swift */,
+				8C6FC4E51E7FEB6300CC10E4 /* MapViewViewModelSpec.swift */,
+				8C76C5BC1E7F3C0000B26819 /* PlaceListCellViewModelSpec.swift */,
 				8C76C5C41E7F43E200B26819 /* ListCellSpec.swift */,
 				8C6FC4E31E7FD50000CC10E4 /* ListViewControllerSpec.swift */,
 				8C9CC7931E7EF920005D13A1 /* MockData.swift */,
@@ -529,14 +532,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C76C5C31E7F439400B26819 /* TableViewCell.swift in Sources */,
-				8C9CC79F1E7F3102005D13A1 /* ListViewModel.swift in Sources */,
+				8C9CC79F1E7F3102005D13A1 /* ListViewViewModel.swift in Sources */,
 				8C9CC78E1E7EE693005D13A1 /* PlacesAroundLocationDataProvider.swift in Sources */,
 				8C76C5BB1E7F3B9A00B26819 /* CellViewModel.swift in Sources */,
 				8CAA5A5D1E7EB6AD00D620C5 /* AppDelegate.swift in Sources */,
 				8CAA5A691E7EC23200D620C5 /* Place.swift in Sources */,
 				8C9CC7881E7EE5DB005D13A1 /* URLFactory.swift in Sources */,
 				8C76C5C81E7F46BA00B26819 /* PlaceListCell.swift in Sources */,
-				8C76C5BF1E7F40C100B26819 /* ListCellViewModel.swift in Sources */,
+				8C76C5BF1E7F40C100B26819 /* PlaceListCellViewModel.swift in Sources */,
 				8C9CC79A1E7F2881005D13A1 /* ViewViewModel.swift in Sources */,
 				8C9CC7851E7EDE1C005D13A1 /* DataProvider.swift in Sources */,
 				8C9CC77F1E7ED4FE005D13A1 /* ListViewController.swift in Sources */,
@@ -549,14 +552,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C9CC79C1E7F28A6005D13A1 /* ListViewModelSpec.swift in Sources */,
+				8C9CC79C1E7F28A6005D13A1 /* ListViewViewModelSpec.swift in Sources */,
+				8C6FC4E61E7FEB6300CC10E4 /* MapViewViewModelSpec.swift in Sources */,
 				8CAA5A6B1E7EC30D00D620C5 /* PlaceModelTests.swift in Sources */,
 				8C9CC7941E7EF920005D13A1 /* MockData.swift in Sources */,
 				8C76C5C51E7F43E200B26819 /* ListCellSpec.swift in Sources */,
 				8C9CC7901E7EE6FA005D13A1 /* PlacesAroundLocationURLFactorySpec.swift in Sources */,
 				8C6FC4E41E7FD50000CC10E4 /* ListViewControllerSpec.swift in Sources */,
 				8C9CC7921E7EF50B005D13A1 /* PlacesAroundLocationDataProviderSpec.swift in Sources */,
-				8C76C5BD1E7F3C0000B26819 /* ListCellViewModelSpec.swift in Sources */,
+				8C76C5BD1E7F3C0000B26819 /* PlaceListCellViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

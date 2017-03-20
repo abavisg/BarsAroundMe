@@ -13,9 +13,9 @@ class PlaceListCell: UITableViewCell, TableViewCell, Reusable {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var distanceLabel: UILabel!
 
-    var viewModel:ListCellViewModel?
+    var viewModel:PlaceListCellViewModel?
     
-    func configure(with viewModel:ListCellViewModel){
+    func configure(with viewModel:PlaceListCellViewModel){
         self.viewModel = viewModel
         
         nameLabel.text = self.viewModel?.nameString

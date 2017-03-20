@@ -17,16 +17,16 @@ class ListViewController: UIViewController {
 
     fileprivate let disposeBag = DisposeBag()
     
-    var viewModel:ListViewModel?
+    var viewModel:ListViewViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel = ListViewModel(withDataProvider: PlaceAroundLocationDataProvider())
+        viewModel = ListViewViewModel(withDataProvider: PlaceAroundLocationDataProvider())
         viewModel?.refresh(withCoordinates: CLLocationCoordinate2D(latitude: -33.8698537, longitude: 151.1977208))
         
         viewModel?.data.asObservable().bindTo(list.rx.items(cellIdentifier: PlaceListCell.identifier, cellType: PlaceListCell.self)) { row, place, cell in
-            let cellViewModel = ListCellViewModel(with: place, coordinates: CLLocationCoordinate2D(latitude: -33.8698537, longitude: 151.1977208))
+            let cellViewModel = PlaceListCellViewModel(with: place, coordinates: CLLocationCoordinate2D(latitude: -33.8698537, longitude: 151.1977208))
             cell.configure(with: cellViewModel)
         }.addDisposableTo(disposeBag)
 

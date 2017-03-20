@@ -21,7 +21,7 @@ class ListCellSpec: QuickSpec{
         place = MockData.place
         var userCoordinates:CLLocationCoordinate2D?
         userCoordinates = CLLocationCoordinate2D(latitude: 0, longitude: 0)
-        let cellViewModel = ListCellViewModel(with: place!, coordinates: userCoordinates!)
+        let cellViewModel = PlaceListCellViewModel(with: place!, coordinates: userCoordinates!)
         cellViewModel.setData()
         beforeEach {
             
