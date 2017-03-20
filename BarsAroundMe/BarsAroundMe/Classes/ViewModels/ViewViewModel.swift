@@ -11,5 +11,5 @@ import CoreLocation
 
 protocol ViewViewModel{
     associatedtype Data
-    func update(with place:Data)
+    func update(with place:Data, and userLocation:CLLocationCoordinate2D)
 }

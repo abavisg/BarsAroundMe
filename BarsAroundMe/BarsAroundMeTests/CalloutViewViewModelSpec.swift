@@ -17,10 +17,10 @@ class CalloutViewViewModelSpec: QuickSpec{
         
         var calloutViewViewModel:CalloutViewViewModel?
         let place = MockData.place
-        
+        let userLocation = CLLocation(latitude: 28.5388, longitude: -81.3756)
         beforeEach {
             calloutViewViewModel = CalloutViewViewModel()
-            calloutViewViewModel?.update(with: place)
+            calloutViewViewModel?.update(with: place, and: userLocation.coordinate)
         }
         
         describe("when initialising") {
@@ -29,7 +29,9 @@ class CalloutViewViewModelSpec: QuickSpec{
                     expect(calloutViewViewModel?.nameString).to(equal(place.name))
                 }
                 it("distanceString string should be as configured") {
-                    let expectedResult = "1 km"
+                    let placeLocation = CLLocation(latitude: place.latitude!, longitude: place.longitude!)
+                    let distance = userLocation.distance(from: placeLocation)
+                    let expectedResult = "\(distance)"
                     expect(calloutViewViewModel?.distanceString).to(equal(expectedResult))
                 }
             }

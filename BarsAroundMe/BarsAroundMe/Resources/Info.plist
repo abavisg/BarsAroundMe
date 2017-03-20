@@ -54,5 +54,7 @@
         <string>comgooglemaps</string>
         <string>comgooglemaps-x-callback</string>
     </array>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>We need to know your location in order to find you cool bars!</string>
 </dict>
 </plist>

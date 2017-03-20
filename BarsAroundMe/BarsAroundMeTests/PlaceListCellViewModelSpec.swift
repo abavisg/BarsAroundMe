@@ -31,8 +31,10 @@ class PlaceListCellViewModelSpec: QuickSpec{
                     expect(cellViewModel?.nameString).to(equal(place?.name))
                 }
                 it("distanceString string should be as configured") {
-                    let expectedResult = "1 km"
-                    
+                    let placeLocation = CLLocation(latitude: (place?.latitude!)!, longitude: (place?.longitude!)!)
+                    let userLocation = CLLocation(latitude: (userCoordinates?.latitude)!, longitude: (userCoordinates?.longitude)!)
+                    let distance = userLocation.distance(from: placeLocation)
+                    let expectedResult = "\(distance)"
                     cellViewModel = PlaceListCellViewModel(with: place!, coordinates: userCoordinates!)
                     expect(cellViewModel?.distanceString).to(equal(expectedResult))
                 }

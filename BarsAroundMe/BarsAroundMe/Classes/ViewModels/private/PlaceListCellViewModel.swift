@@ -15,20 +15,22 @@ class PlaceListCellViewModel: CellViewModel{
     var distanceString:String?
     
     let place:Place?
-    let coordinates:CLLocationCoordinate2D?
+    var userLocation:CLLocation?
     
     init(with place:Place, coordinates:CLLocationCoordinate2D){
         self.place = place
-        self.coordinates = coordinates
+        self.userLocation = CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
         setData()
     }
     
     func setData(){
         nameString = place?.name
-        distanceString = "1 km"
+        distanceString = self.makeDistanceString()
     }
     
     func makeDistanceString()->String{
-        return ""
+        let placeLocation = CLLocation(latitude: (place?.latitude!)!, longitude: (place?.longitude!)!)
+        let distance = userLocation?.distance(from: placeLocation)
+        return "\(distance!)"
     }
 }

@@ -22,8 +22,24 @@ final class MapViewViewModel: ViewControllerViewModel{
     
     let dataProvider:DataProvider
     
+    var locationService:GetCurrentLocationService?
+    var currentLocation:CLLocationCoordinate2D = CLLocationCoordinate2D()
+    
     init(withDataProvider dataProvider:DataProvider){
         self.dataProvider = dataProvider
+        
+        locationService = GetCurrentLocationService(with: CLLocationManager())
+        locationService?.completionHandler = {(coordinates, error) in
+            guard error == nil else{
+                return
+            }
+            if let coordinates = coordinates{
+                self.currentLocation = coordinates
+                self.refresh(withCoordinates: coordinates)
+            }else{
+                //alert user for no location
+            }
+        }
     }
     
     func refresh(withCoordinates coordinates:CLLocationCoordinate2D){
@@ -43,12 +59,10 @@ final class MapViewViewModel: ViewControllerViewModel{
         return places[indexPath.row]
     }
     
-    //MARK: - Actions
+    //MARK: - Location
     
-    func tappedPin(with place:Place){
-        
-        
+    func requestCurrentLocation(){
+        locationService?.requestCurrentLocation()
     }
-    
     
 }

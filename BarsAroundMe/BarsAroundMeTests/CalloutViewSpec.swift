@@ -17,8 +17,9 @@ class CalloutViewSpec: QuickSpec{
         
         var view:CalloutView?
         let place = MockData.place
+        let expectedLocation = CLLocation(latitude: 28.5388, longitude: -81.3756)
         let viewModel = CalloutViewViewModel()
-        viewModel.update(with: place)
+        viewModel.update(with: place, and: expectedLocation.coordinate)
       
         beforeEach {
             

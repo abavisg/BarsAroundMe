@@ -16,7 +16,7 @@ class GetCurrentLocationServiceSpec: QuickSpec{
     override func spec() {
         
         let locationManagerMock = LocationManagerMock()
-        let locationService = GetCurrentLocationService(with locationManagerMock)
+        let locationService = GetCurrentLocationService(with: locationManagerMock)
         beforeEach {
         
         }
@@ -32,39 +32,39 @@ class GetCurrentLocationServiceSpec: QuickSpec{
             context("with a location retrieved") {
                 it("currentLocation should have a latitude and a longitude") {
                     let expectedLocation = CLLocation(latitude: 28.5388, longitude: -81.3756)
-                    let currentLocation:CLLocationCoordinate2D?
+                    var currentLocation:CLLocationCoordinate2D?
                     locationService.completionHandler = {(coordinates, error) in
                         guard error == nil else{
                             return
                         }
                         if let coordinates = coordinates{
-                            self.currentLocation = coordinates
+                            currentLocation = coordinates
                         }else{
                         }
                         
                     }
-                    expect(self.currentLocation.latitude).to(equal(expectedLocation.latitude))
-                    expect(self.currentLocation.longitude).to(equal(expectedLocation.longitude))
+                    locationService.requestCurrentLocation()
+                    expect(currentLocation?.latitude).toEventually(equal(expectedLocation.coordinate.latitude))
+                    expect(currentLocation?.longitude).toEventually(equal(expectedLocation.coordinate.longitude))
 
                 }
             }
             context("with no available location") {
                 it("currentLocation should be nil") {
-                    let expectedLocation = CLLocation(latitude: 28.5388, longitude: -81.3756)
-                    let currentLocation:CLLocationCoordinate2D?
+                    var currentLocation:CLLocationCoordinate2D?
                     locationService.completionHandler = {(coordinates, error) in
                         guard error == nil else{
                             return
                         }
                         if let coordinates = coordinates{
-                            self.currentLocation = coordinates
+                            currentLocation = coordinates
                         }else{
                         }
                         
                     }
-                    locationService.locationManagerMock.hasLocation = false
-                    locationService.startUpdating
-                    expect(self.currentLocation).to(beNil())
+                    (locationService.locationManager as! LocationManagerMock).hasLocation = false
+                    locationService.requestCurrentLocation()
+                    expect(currentLocation).to(beNil())
                 }
             }
         }

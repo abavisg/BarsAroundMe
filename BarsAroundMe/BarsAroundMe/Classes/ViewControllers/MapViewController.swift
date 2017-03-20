@@ -30,11 +30,12 @@ class MapViewController: UIViewController {
         mapView.delegate = self
         
         viewModel = MapViewViewModel(withDataProvider: PlaceAroundLocationDataProvider())
-        viewModel?.refresh(withCoordinates: CLLocationCoordinate2D(latitude: -33.8698537, longitude: 151.1977208))
+        viewModel?.requestCurrentLocation()
         
         self.viewModel?.data.asObservable().subscribe(onNext: { collections in
-            self.reloadMapView()
-            
+            DispatchQueue.main.async {
+                self.reloadMapView()
+            }
         }).addDisposableTo(disposeBag)
     }
 
@@ -71,7 +72,7 @@ extension MapViewController:  MKMapViewDelegate{
         if calloutViewViewModel == nil {
             calloutViewViewModel = CalloutViewViewModel()
         }
-        calloutViewViewModel?.update(with: place)
+        calloutViewViewModel?.update(with: place, and: (viewModel?.currentLocation)!)
         
         if calloutView == nil {
             let views = Bundle.main.loadNibNamed("CalloutView", owner: nil, options: nil)

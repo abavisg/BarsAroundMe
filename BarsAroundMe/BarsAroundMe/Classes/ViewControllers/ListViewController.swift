@@ -23,10 +23,10 @@ class ListViewController: UIViewController {
         super.viewDidLoad()
         
         viewModel = ListViewViewModel(withDataProvider: PlaceAroundLocationDataProvider())
-        viewModel?.refresh(withCoordinates: CLLocationCoordinate2D(latitude: -33.8698537, longitude: 151.1977208))
+        viewModel?.requestCurrentLocation()
         
         viewModel?.data.asObservable().bindTo(list.rx.items(cellIdentifier: PlaceListCell.identifier, cellType: PlaceListCell.self)) { row, place, cell in
-            let cellViewModel = PlaceListCellViewModel(with: place, coordinates: CLLocationCoordinate2D(latitude: -33.8698537, longitude: 151.1977208))
+            let cellViewModel = PlaceListCellViewModel(with: place, coordinates: (self.viewModel?.currentLocation)!)
             cell.configure(with: cellViewModel)
         }.addDisposableTo(disposeBag)
 

@@ -15,19 +15,23 @@ class CalloutViewViewModel: ViewViewModel{
     var distanceString:String?
     
     var place:Place?
+    var userLocation:CLLocation?
     
     init() {
         
     }
     
-    func update(with place:Place){
+    func update(with place:Place, and userLocation:CLLocationCoordinate2D){
         self.place = place
+        self.userLocation = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
     
         nameString = place.name
-        distanceString = "1 km"
+        distanceString = self.makeDistanceString()
     }
     
     func makeDistanceString()->String{
-        return ""
+        let placeLocation = CLLocation(latitude: (place?.latitude!)!, longitude: (place?.longitude!)!)
+        let distance = userLocation?.distance(from: placeLocation)
+        return "\(distance!)"
     }
 }
