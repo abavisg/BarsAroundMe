@@ -1,5 +1,5 @@
 //
-//  ListCellSpec.swift
+//  PlaceListCellSpec.swift
 //  BarsAroundMe
 //
 //  Created by Giorgos Ampavis on 19/03/2017.
@@ -11,7 +11,7 @@ import Nimble
 import CoreLocation
 @testable import BarsAroundMe
 
-class ListCellSpec: QuickSpec{
+class PlaceListCellSpec: QuickSpec{
     
     override func spec() {
         

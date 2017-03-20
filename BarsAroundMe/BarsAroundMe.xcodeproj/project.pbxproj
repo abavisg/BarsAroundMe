@@ -17,12 +17,13 @@
 		8C76C5BD1E7F3C0000B26819 /* PlaceListCellViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5BC1E7F3C0000B26819 /* PlaceListCellViewModelSpec.swift */; };
 		8C76C5BF1E7F40C100B26819 /* PlaceListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5BE1E7F40C100B26819 /* PlaceListCellViewModel.swift */; };
 		8C76C5C31E7F439400B26819 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5C21E7F439400B26819 /* TableViewCell.swift */; };
-		8C76C5C51E7F43E200B26819 /* ListCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5C41E7F43E200B26819 /* ListCellSpec.swift */; };
+		8C76C5C51E7F43E200B26819 /* PlaceListCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5C41E7F43E200B26819 /* PlaceListCellSpec.swift */; };
 		8C76C5C81E7F46BA00B26819 /* PlaceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5C71E7F46BA00B26819 /* PlaceListCell.swift */; };
 		8C8D0D5E1E80032400F77B2E /* CalloutViewViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D0D5D1E80032400F77B2E /* CalloutViewViewModelSpec.swift */; };
 		8C8D0D621E80037400F77B2E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D0D611E80037400F77B2E /* View.swift */; };
 		8C8D0D641E80045600F77B2E /* ViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D0D631E80045600F77B2E /* ViewViewModel.swift */; };
 		8C8D0D661E8004CB00F77B2E /* CalloutViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D0D651E8004CB00F77B2E /* CalloutViewViewModel.swift */; };
+		8C8D0D681E80075700F77B2E /* CalloutViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D0D671E80075700F77B2E /* CalloutViewSpec.swift */; };
 		8C9CC77F1E7ED4FE005D13A1 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CC77E1E7ED4FE005D13A1 /* ListViewController.swift */; };
 		8C9CC7811E7ED506005D13A1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CC7801E7ED506005D13A1 /* MapViewController.swift */; };
 		8C9CC7851E7EDE1C005D13A1 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CC7841E7EDE1C005D13A1 /* DataProvider.swift */; };
@@ -70,12 +71,13 @@
 		8C76C5BC1E7F3C0000B26819 /* PlaceListCellViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceListCellViewModelSpec.swift; sourceTree = "<group>"; };
 		8C76C5BE1E7F40C100B26819 /* PlaceListCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceListCellViewModel.swift; sourceTree = "<group>"; };
 		8C76C5C21E7F439400B26819 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		8C76C5C41E7F43E200B26819 /* ListCellSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCellSpec.swift; sourceTree = "<group>"; };
+		8C76C5C41E7F43E200B26819 /* PlaceListCellSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceListCellSpec.swift; sourceTree = "<group>"; };
 		8C76C5C71E7F46BA00B26819 /* PlaceListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceListCell.swift; sourceTree = "<group>"; };
 		8C8D0D5D1E80032400F77B2E /* CalloutViewViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalloutViewViewModelSpec.swift; sourceTree = "<group>"; };
 		8C8D0D611E80037400F77B2E /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		8C8D0D631E80045600F77B2E /* ViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewViewModel.swift; sourceTree = "<group>"; };
 		8C8D0D651E8004CB00F77B2E /* CalloutViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalloutViewViewModel.swift; sourceTree = "<group>"; };
+		8C8D0D671E80075700F77B2E /* CalloutViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalloutViewSpec.swift; sourceTree = "<group>"; };
 		8C9CC77E1E7ED4FE005D13A1 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		8C9CC7801E7ED506005D13A1 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8C9CC7841E7EDE1C005D13A1 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
@@ -300,10 +302,11 @@
 				8C9CC79B1E7F28A6005D13A1 /* ListViewViewModelSpec.swift */,
 				8C6FC4E51E7FEB6300CC10E4 /* MapViewViewModelSpec.swift */,
 				8C76C5BC1E7F3C0000B26819 /* PlaceListCellViewModelSpec.swift */,
-				8C76C5C41E7F43E200B26819 /* ListCellSpec.swift */,
+				8C76C5C41E7F43E200B26819 /* PlaceListCellSpec.swift */,
 				8C6FC4E31E7FD50000CC10E4 /* ListViewControllerSpec.swift */,
 				8C6FC4E91E7FED7000CC10E4 /* MapViewControllerSpec.swift */,
 				8C8D0D5D1E80032400F77B2E /* CalloutViewViewModelSpec.swift */,
+				8C8D0D671E80075700F77B2E /* CalloutViewSpec.swift */,
 				8C9CC7931E7EF920005D13A1 /* MockData.swift */,
 			);
 			path = BarsAroundMeTests;
@@ -604,10 +607,11 @@
 			files = (
 				8C9CC79C1E7F28A6005D13A1 /* ListViewViewModelSpec.swift in Sources */,
 				8C6FC4E61E7FEB6300CC10E4 /* MapViewViewModelSpec.swift in Sources */,
+				8C8D0D681E80075700F77B2E /* CalloutViewSpec.swift in Sources */,
 				8CAA5A6B1E7EC30D00D620C5 /* PlaceModelTests.swift in Sources */,
 				8C9CC7941E7EF920005D13A1 /* MockData.swift in Sources */,
 				8C8D0D5E1E80032400F77B2E /* CalloutViewViewModelSpec.swift in Sources */,
-				8C76C5C51E7F43E200B26819 /* ListCellSpec.swift in Sources */,
+				8C76C5C51E7F43E200B26819 /* PlaceListCellSpec.swift in Sources */,
 				8C9CC7901E7EE6FA005D13A1 /* PlacesAroundLocationURLFactorySpec.swift in Sources */,
 				8C6FC4EA1E7FED7000CC10E4 /* MapViewControllerSpec.swift in Sources */,
 				8C6FC4E41E7FD50000CC10E4 /* ListViewControllerSpec.swift in Sources */,

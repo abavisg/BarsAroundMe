@@ -60,5 +60,15 @@ class MapViewController: UIViewController {
 extension MapViewController:  MKMapViewDelegate{
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard !(view.annotation is MKUserLocation) else{
+            return
+        }
+        let annotation = view.annotation as! PointAnnotation
+        let views = Bundle.main.loadNibNamed("CalloutView", owner: nil, options: nil)
+        let calloutView = views?[0] as! CalloutView
+
+        calloutView.center = CGPoint(x: view.bounds.size.width / 2, y: -calloutView.bounds.size.height*0.52)
+        view.addSubview(calloutView)
+        mapView.setCenter((view.annotation?.coordinate)!, animated: true)
     }
 }
