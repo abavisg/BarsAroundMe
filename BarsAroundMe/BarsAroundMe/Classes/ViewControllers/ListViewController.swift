@@ -30,6 +30,14 @@ class ListViewController: UIViewController {
             cell.configure(with: cellViewModel)
         }.addDisposableTo(disposeBag)
 
+        list.rx.itemSelected.map { indexPath in
+                return (indexPath, self.viewModel?.places[indexPath.row])
+            }
+            .subscribe(onNext: { indexPath, model in
+                
+                self.viewModel?.tappedItem(at: indexPath)
+            })
+            .disposed(by: disposeBag)
     }
 
     override func didReceiveMemoryWarning() {

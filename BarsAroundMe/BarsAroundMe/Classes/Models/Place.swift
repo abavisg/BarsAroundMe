@@ -14,9 +14,9 @@ public struct Place {
     private struct SerializationKeys {
         static let name = "name"
         static let id = "id"
-        static let placeID = "placeID"
-        static let latitude = "latitude"
-        static let longitude = "longitude"
+        static let placeID = "place_id"
+        static let latitude = "lat"
+        static let longitude = "lng"
     }
 
     // MARK: Properties
@@ -30,7 +30,10 @@ public struct Place {
         self.name = json[SerializationKeys.name].string
         self.id = json[SerializationKeys.id].string
         self.placeID = json[SerializationKeys.placeID].string
-        self.latitude = json[SerializationKeys.latitude].double
-        self.longitude = json[SerializationKeys.longitude].double
+        
+        let geometry:JSON = json["geometry"]
+        let location:JSON = geometry["location"]
+        self.latitude = location[SerializationKeys.latitude].double
+        self.longitude = location[SerializationKeys.longitude].double
     }
 }

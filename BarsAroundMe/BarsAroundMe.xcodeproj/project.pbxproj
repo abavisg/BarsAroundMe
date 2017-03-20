@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C6FC4E41E7FD50000CC10E4 /* ListViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC4E31E7FD50000CC10E4 /* ListViewControllerSpec.swift */; };
 		8C76C5B91E7F398200B26819 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C76C5B81E7F398200B26819 /* CoreLocation.framework */; };
 		8C76C5BB1E7F3B9A00B26819 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5BA1E7F3B9A00B26819 /* CellViewModel.swift */; };
 		8C76C5BD1E7F3C0000B26819 /* ListCellViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5BC1E7F3C0000B26819 /* ListCellViewModelSpec.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		353C3D46F2F845C6381C54AD /* Pods_BarsAroundMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarsAroundMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D5CA1E7B2926DDAB4A398F /* Pods-BarsAroundMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarsAroundMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarsAroundMeTests/Pods-BarsAroundMeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8C6FC4E31E7FD50000CC10E4 /* ListViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewControllerSpec.swift; sourceTree = "<group>"; };
 		8C76C5B81E7F398200B26819 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8C76C5BA1E7F3B9A00B26819 /* CellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		8C76C5BC1E7F3C0000B26819 /* ListCellViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCellViewModelSpec.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				8C9CC79B1E7F28A6005D13A1 /* ListViewModelSpec.swift */,
 				8C76C5BC1E7F3C0000B26819 /* ListCellViewModelSpec.swift */,
 				8C76C5C41E7F43E200B26819 /* ListCellSpec.swift */,
+				8C6FC4E31E7FD50000CC10E4 /* ListViewControllerSpec.swift */,
 				8C9CC7931E7EF920005D13A1 /* MockData.swift */,
 			);
 			path = BarsAroundMeTests;
@@ -551,6 +554,7 @@
 				8C9CC7941E7EF920005D13A1 /* MockData.swift in Sources */,
 				8C76C5C51E7F43E200B26819 /* ListCellSpec.swift in Sources */,
 				8C9CC7901E7EE6FA005D13A1 /* PlacesAroundLocationURLFactorySpec.swift in Sources */,
+				8C6FC4E41E7FD50000CC10E4 /* ListViewControllerSpec.swift in Sources */,
 				8C9CC7921E7EF50B005D13A1 /* PlacesAroundLocationDataProviderSpec.swift in Sources */,
 				8C76C5BD1E7F3C0000B26819 /* ListCellViewModelSpec.swift in Sources */,
 			);

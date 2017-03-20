@@ -42,4 +42,27 @@ final class ListViewModel: ViewViewModel{
     func itemAtIndexPath(indexPath:IndexPath)->Any{
         return places[indexPath.row]
     }
+    
+    //MARK: - Actions
+    
+    func tappedItem(at indexPath:IndexPath){
+        let place = self.itemAtIndexPath(indexPath: indexPath) as? Place
+        if let latitude = place?.latitude, let longitude = place?.longitude {
+            let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            self.openGoogleMaps(with: coordinates)
+        }else{
+            print("No coordinates for this place.")
+        }
+    }
+    
+    //MARK: - GoogleMaps
+    
+    func openGoogleMaps(with coordinates:CLLocationCoordinate2D){
+        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+            let url = "comgooglemaps://?q=\(coordinates.latitude),\(coordinates.longitude)&zoom=14&views=traffic"
+            UIApplication.shared.openURL(URL(string:url)!)
+        } else {
+            print("Can't open google maps!");
+        }
+    }
 }

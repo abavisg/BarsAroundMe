@@ -29,19 +29,19 @@ class PlaceModelsTests: QuickSpec {
             }
             it("should populate the placeID property") {
                 let data = self.placeData()
-                let placeID:String = data["placeID"].stringValue
+                let placeID:String = data["place_id"].stringValue
                 let item = Place(withJSON: data)
                 expect(item.placeID).to(equal(placeID))
             }
             it("should populate the latitude property") {
                 let data = self.placeData()
-                let latitude:Double = data["latitude"].doubleValue
+                let latitude:Double = data["geometry"]["location"]["lat"].doubleValue
                 let item = Place(withJSON: data)
                 expect(item.latitude).to(equal(latitude))
             }
             it("should populate the longitude property") {
                 let data = self.placeData()
-                let longitude:Double = data["longitude"].doubleValue
+                let longitude:Double = data["geometry"]["location"]["lng"].doubleValue
                 let item = Place(withJSON: data)
                 expect(item.longitude).to(equal(longitude))
             }
@@ -50,10 +50,9 @@ class PlaceModelsTests: QuickSpec {
     
     private func placeData()->JSON{
         let json:JSON = ["name" : "Flying Fish Restaurant & Bar",
-                                 "id" : "05bf6e9aa18b35f174f5076c348ce8e91e328aba",
-                                 "placeID" : "ChIJm7Ex8UmuEmsR37p4Hm0D0VI",
-                                 "latitude" : -33.8627642,
-                                 "longitude" : 151.1951861
+                         "id" : "05bf6e9aa18b35f174f5076c348ce8e91e328aba",
+                         "place_id" : "ChIJm7Ex8UmuEmsR37p4Hm0D0VI",
+                         "geometry" : ["location" : ["lat" : -33.8627642,"lng" : 151.1951861]]
         ]
         return json
     }
