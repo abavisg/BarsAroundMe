@@ -36,7 +36,7 @@ class CalloutViewSpec: QuickSpec{
                     expect(view?.nameLabel.text).toEventually(equal(viewModel.nameString))
                 }
                 it("distanceLabel text should be the same as distanceString") {
-                    view?.configure(with: viewModel)
+                    view?.update(with: viewModel)
                     expect(view?.nameLabel.text).toEventually(equal(viewModel.nameString))
                 }
                 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CalloutView" customModule="BarsAroundMe">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9En-Il-Vqp">
+                    <rect key="frame" x="5" y="7" width="190" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="C4y-AX-0Rk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnm-0W-1Xe">
+                    <rect key="frame" x="5" y="29" width="190" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="3UD-xG-J5g"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bnm-0W-1Xe" firstAttribute="trailing" secondItem="9En-Il-Vqp" secondAttribute="trailing" id="Ahj-8z-Hz5"/>
+                <constraint firstItem="bnm-0W-1Xe" firstAttribute="leading" secondItem="9En-Il-Vqp" secondAttribute="leading" id="IEs-Jg-Khg"/>
+                <constraint firstItem="bnm-0W-1Xe" firstAttribute="top" secondItem="9En-Il-Vqp" secondAttribute="bottom" constant="4" id="PmS-ZX-26S"/>
+                <constraint firstAttribute="trailing" secondItem="9En-Il-Vqp" secondAttribute="trailing" constant="5" id="aOE-3l-fl2"/>
+                <constraint firstItem="9En-Il-Vqp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="bD9-rO-MGj"/>
+                <constraint firstItem="9En-Il-Vqp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="fG8-Yg-xoe"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="distanceLabel" destination="bnm-0W-1Xe" id="shi-2Y-hxk"/>
+                <outlet property="nameLabel" destination="9En-Il-Vqp" id="Ea6-pI-sBg"/>
+            </connections>
+        </view>
+    </objects>
+</document>
