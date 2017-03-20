@@ -34,10 +34,12 @@ class ListViewController: UIViewController {
                 return (indexPath, self.viewModel?.places[indexPath.row])
             }
             .subscribe(onNext: { indexPath, model in
-                
+                if let selectedRowIndexPath = self.list.indexPathForSelectedRow {
+                    self.list.deselectRow(at: selectedRowIndexPath, animated: true)
+                }
                 self.viewModel?.tappedItem(at: indexPath)
             })
-            .disposed(by: disposeBag)
+            .disposed(by: disposeBag)        
     }
 
     override func didReceiveMemoryWarning() {
