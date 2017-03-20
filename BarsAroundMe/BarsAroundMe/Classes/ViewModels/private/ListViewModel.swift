@@ -29,10 +29,10 @@ final class ListViewModel: ViewViewModel{
     func refresh(withCoordinates coordinates:CLLocationCoordinate2D){
         weak var weakSelf = self
         
-        let locationString = "\(coordinates.latitude),\(coordinates.longitude)"
-        let url = URL(string:locationString)!
+        let queries = ["location" : "\(coordinates.latitude),\(coordinates.longitude)"]
+        let urlFactory = PlacesAroundLocationURLFactory(withBasePath: "https://maps.googleapis.com/maps/api/place/search/json", andParameters: queries)
 
-        dataProvider.fetchResults(forURL: url) { (results, error) in
+        dataProvider.fetchResults(forURL: urlFactory.url()) { (results, error) in
             if let results = results {
                 weakSelf?.data.value = results as! [Place]
             }

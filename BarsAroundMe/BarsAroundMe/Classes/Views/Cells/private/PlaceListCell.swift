@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlaceListCell: UITableViewCell, TableViewCell {
+class PlaceListCell: UITableViewCell, TableViewCell, Reusable {
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var distanceLabel: UILabel!
