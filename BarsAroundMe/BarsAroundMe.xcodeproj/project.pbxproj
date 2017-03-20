@@ -10,6 +10,7 @@
 		8C6FC4E41E7FD50000CC10E4 /* ListViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC4E31E7FD50000CC10E4 /* ListViewControllerSpec.swift */; };
 		8C6FC4E61E7FEB6300CC10E4 /* MapViewViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC4E51E7FEB6300CC10E4 /* MapViewViewModelSpec.swift */; };
 		8C6FC4E81E7FECDF00CC10E4 /* MapViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC4E71E7FECDF00CC10E4 /* MapViewViewModel.swift */; };
+		8C6FC4EA1E7FED7000CC10E4 /* MapViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FC4E91E7FED7000CC10E4 /* MapViewControllerSpec.swift */; };
 		8C76C5B91E7F398200B26819 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C76C5B81E7F398200B26819 /* CoreLocation.framework */; };
 		8C76C5BB1E7F3B9A00B26819 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5BA1E7F3B9A00B26819 /* CellViewModel.swift */; };
 		8C76C5BD1E7F3C0000B26819 /* PlaceListCellViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C76C5BC1E7F3C0000B26819 /* PlaceListCellViewModelSpec.swift */; };
@@ -57,6 +58,7 @@
 		8C6FC4E31E7FD50000CC10E4 /* ListViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewControllerSpec.swift; sourceTree = "<group>"; };
 		8C6FC4E51E7FEB6300CC10E4 /* MapViewViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewViewModelSpec.swift; sourceTree = "<group>"; };
 		8C6FC4E71E7FECDF00CC10E4 /* MapViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewViewModel.swift; sourceTree = "<group>"; };
+		8C6FC4E91E7FED7000CC10E4 /* MapViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewControllerSpec.swift; sourceTree = "<group>"; };
 		8C76C5B81E7F398200B26819 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8C76C5BA1E7F3B9A00B26819 /* CellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		8C76C5BC1E7F3C0000B26819 /* PlaceListCellViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceListCellViewModelSpec.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				8C76C5BC1E7F3C0000B26819 /* PlaceListCellViewModelSpec.swift */,
 				8C76C5C41E7F43E200B26819 /* ListCellSpec.swift */,
 				8C6FC4E31E7FD50000CC10E4 /* ListViewControllerSpec.swift */,
+				8C6FC4E91E7FED7000CC10E4 /* MapViewControllerSpec.swift */,
 				8C9CC7931E7EF920005D13A1 /* MockData.swift */,
 			);
 			path = BarsAroundMeTests;
@@ -562,6 +565,7 @@
 				8C9CC7941E7EF920005D13A1 /* MockData.swift in Sources */,
 				8C76C5C51E7F43E200B26819 /* ListCellSpec.swift in Sources */,
 				8C9CC7901E7EE6FA005D13A1 /* PlacesAroundLocationURLFactorySpec.swift in Sources */,
+				8C6FC4EA1E7FED7000CC10E4 /* MapViewControllerSpec.swift in Sources */,
 				8C6FC4E41E7FD50000CC10E4 /* ListViewControllerSpec.swift in Sources */,
 				8C9CC7921E7EF50B005D13A1 /* PlacesAroundLocationDataProviderSpec.swift in Sources */,
 				8C76C5BD1E7F3C0000B26819 /* PlaceListCellViewModelSpec.swift in Sources */,
