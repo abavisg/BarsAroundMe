@@ -46,6 +46,7 @@
 		8CAA5A5D1E7EB6AD00D620C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAA5A5A1E7EB6AD00D620C5 /* AppDelegate.swift */; };
 		8CAA5A691E7EC23200D620C5 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAA5A681E7EC23200D620C5 /* Place.swift */; };
 		8CAA5A6B1E7EC30D00D620C5 /* PlaceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAA5A6A1E7EC30D00D620C5 /* PlaceModelTests.swift */; };
+		8CC28EB41E808961006550DF /* GetCurrentLocationServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC28EB31E808961006550DF /* GetCurrentLocationServiceSpec.swift */; };
 		9D009EE7670719D912AF990F /* Pods_BarsAroundMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D985FBC798FBB6C97D98A853 /* Pods_BarsAroundMeTests.framework */; };
 		D7398F6998B15E2DC7715F9D /* Pods_BarsAroundMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353C3D46F2F845C6381C54AD /* Pods_BarsAroundMe.framework */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		8CAA5A5A1E7EB6AD00D620C5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CAA5A681E7EC23200D620C5 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		8CAA5A6A1E7EC30D00D620C5 /* PlaceModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceModelTests.swift; sourceTree = "<group>"; };
+		8CC28EB31E808961006550DF /* GetCurrentLocationServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCurrentLocationServiceSpec.swift; sourceTree = "<group>"; };
 		AE9F651ED445DAD56AC0A5DA /* Pods-BarsAroundMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarsAroundMeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarsAroundMeTests/Pods-BarsAroundMeTests.release.xcconfig"; sourceTree = "<group>"; };
 		B0E17E9E1F70EC816FA22FB5 /* Pods-BarsAroundMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarsAroundMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarsAroundMe/Pods-BarsAroundMe.release.xcconfig"; sourceTree = "<group>"; };
 		BBE358804D60C7BE3E0016FF /* Pods-BarsAroundMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarsAroundMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarsAroundMe/Pods-BarsAroundMe.debug.xcconfig"; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				8C6FC4E91E7FED7000CC10E4 /* MapViewControllerSpec.swift */,
 				8C8D0D5D1E80032400F77B2E /* CalloutViewViewModelSpec.swift */,
 				8C8D0D671E80075700F77B2E /* CalloutViewSpec.swift */,
+				8CC28EB31E808961006550DF /* GetCurrentLocationServiceSpec.swift */,
 				8C9CC7931E7EF920005D13A1 /* MockData.swift */,
 			);
 			path = BarsAroundMeTests;
@@ -625,6 +628,7 @@
 				8C6FC4E41E7FD50000CC10E4 /* ListViewControllerSpec.swift in Sources */,
 				8C9CC7921E7EF50B005D13A1 /* PlacesAroundLocationDataProviderSpec.swift in Sources */,
 				8C76C5BD1E7F3C0000B26819 /* PlaceListCellViewModelSpec.swift in Sources */,
+				8CC28EB41E808961006550DF /* GetCurrentLocationServiceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
