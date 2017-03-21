@@ -14,6 +14,7 @@ import CoreLocation
 
 class MapViewController: UIViewController {
     
+    @IBOutlet weak var refreshButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
 
     fileprivate let disposeBag = DisposeBag()
@@ -25,29 +26,47 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.title = "Bars Around Me"
+
+        initViewModel()
+        initReactive()
+        initMapView()
         
-        mapView.showsUserLocation = true
-        mapView.delegate = self
-        
-        viewModel = MapViewViewModel(withDataProvider: PlaceAroundLocationDataProvider())
         viewModel?.requestCurrentLocation()
-        
-        self.viewModel?.data.asObservable().subscribe(onNext: { collections in
-            DispatchQueue.main.async {
-                self.reloadMapView()
-            }
-        }).addDisposableTo(disposeBag)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    //MARK: - IBActions
+    
+    @IBAction func tappedRefresh(_ sender: Any) {
+        self.viewModel?.requestCurrentLocation()
+    }
+    
+    //MARK: - ListViewViewModel
+    private func initViewModel(){
+        viewModel = MapViewViewModel(withDataProvider: PlaceAroundLocationDataProvider())
+    }
+    
+    //MARK: - Reactive
+    private func initReactive(){
+        self.viewModel?.data.asObservable().subscribe(onNext: { collections in
+            DispatchQueue.main.async {
+                self.reloadMapView()
+            }
+        }).addDisposableTo(disposeBag)
+    }
+    
     //MARK: - MapView
+    private func initMapView(){
+        mapView.showsUserLocation = true
+        mapView.delegate = self
+    }
     
     private func reloadMapView(){
+        resetMapView()
         if let places = self.viewModel?.places{
             var annotations = [MKPointAnnotation]()
             for i in 0..<places.count{
@@ -59,6 +78,13 @@ class MapViewController: UIViewController {
             }
             self.mapView.showAnnotations(annotations, animated: true)
         }
+    }
+    
+    private func resetMapView(){
+        let annotations = mapView.annotations.filter {
+            $0 !== self.mapView.userLocation
+        }
+        mapView.removeAnnotations(annotations)
     }
 }
 
