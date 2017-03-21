@@ -14,24 +14,48 @@ import CoreLocation
 class ListViewController: UIViewController {
 
     @IBOutlet weak var list: UITableView!
-
-    fileprivate let disposeBag = DisposeBag()
     
+    fileprivate var refreshControl: UIRefreshControl?
+    fileprivate let disposeBag = DisposeBag()
     var viewModel:ListViewViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Bars Around Me"
         
-        viewModel = ListViewViewModel(withDataProvider: PlaceAroundLocationDataProvider())
+        initViewModel()
+        initReactive()
+        initPullToRefresh()
+        
         viewModel?.requestCurrentLocation()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    //MARK: - ListViewViewModel
+    private func initViewModel(){
+        viewModel = ListViewViewModel(withDataProvider: PlaceAroundLocationDataProvider())
+    }
+    
+    //MARK: - Reactive
+    private func initReactive(){
+        viewModel?.data.asObservable().subscribe(onNext: { collections in
+            DispatchQueue.main.async {
+                if let refreshControl = self.refreshControl, refreshControl.isRefreshing {
+                    refreshControl.endRefreshing()
+                }
+            }
+        }).addDisposableTo(disposeBag)
         
         viewModel?.data.asObservable().bindTo(list.rx.items(cellIdentifier: PlaceListCell.identifier, cellType: PlaceListCell.self)) { row, place, cell in
-            let cellViewModel = PlaceListCellViewModel(with: place, coordinates: (self.viewModel?.currentLocation)!)
-            cell.configure(with: cellViewModel)
-        }.addDisposableTo(disposeBag)
-
+                let cellViewModel = PlaceListCellViewModel(with: place, coordinates: (self.viewModel?.currentLocation)!)
+                cell.configure(with: cellViewModel)
+            }.addDisposableTo(disposeBag)
+        
         list.rx.itemSelected.map { indexPath in
-                return (indexPath, self.viewModel?.places[indexPath.row])
+            return (indexPath, self.viewModel?.places[indexPath.row])
             }
             .subscribe(onNext: { indexPath, model in
                 if let selectedRowIndexPath = self.list.indexPathForSelectedRow {
@@ -39,11 +63,19 @@ class ListViewController: UIViewController {
                 }
                 self.viewModel?.tappedItem(at: indexPath)
             })
-            .disposed(by: disposeBag)        
+            .disposed(by: disposeBag)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    
+    //Mark: - Pull to refresh
+    private func initPullToRefresh(){
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(self.handleRefresh), for: UIControlEvents.valueChanged)
+        list.addSubview(refreshControl!)
     }
-
+    
+    @objc private func handleRefresh(){
+        self.viewModel?.requestCurrentLocation()
+    }
+   
+    
 }

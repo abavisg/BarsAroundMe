@@ -26,6 +26,8 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Bars Around Me"
+        
         mapView.showsUserLocation = true
         mapView.delegate = self
         

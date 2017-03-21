@@ -267,7 +267,6 @@
 			isa = PBXGroup;
 			children = (
 				8C9CC79E1E7F3102005D13A1 /* ListViewViewModel.swift */,
-				8CC28EAE1E807823006550DF /* FakeLocation.gpx */,
 				8C6FC4E71E7FECDF00CC10E4 /* MapViewViewModel.swift */,
 				8C76C5BE1E7F40C100B26819 /* PlaceListCellViewModel.swift */,
 				8C8D0D651E8004CB00F77B2E /* CalloutViewViewModel.swift */,
@@ -339,6 +338,7 @@
 		8CAA5A541E7EB5FE00D620C5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8CC28EAE1E807823006550DF /* FakeLocation.gpx */,
 				8CAA5A571E7EB62800D620C5 /* Info.plist */,
 				8CAA5A551E7EB5FE00D620C5 /* Images.xcassets */,
 			);
