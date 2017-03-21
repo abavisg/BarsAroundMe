@@ -111,12 +111,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="G7i-Ba-SvW">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="nd7-U8-qPx">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GxV-b4-Y7b">
-                                <rect key="frame" x="279" y="7" width="80" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GxV-b4-Y7b">
+                                <rect key="frame" x="319" y="2" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Refresh">
+                                <state key="normal" image="generic_btn_refresh">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -154,11 +154,13 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--List-->
+        <!--Navigation Controller-->
         <scene sceneID="xxf-AW-k6F">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xos-EO-EW8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="" image="generic_btn_list" selectedImage="generic_btn_list" id="acW-dT-cKf">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="a71-Bd-T7O">
@@ -174,11 +176,13 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
-        <!--Map-->
+        <!--Navigation Controller-->
         <scene sceneID="J29-0u-h4Z">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hEk-fB-ckX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="generic_btn_map" selectedImage="generic_btn_map" id="cPa-gy-q4n">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="tiV-ly-hRf">
@@ -196,7 +200,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="generic_btn_list" width="41" height="30"/>
+        <image name="generic_btn_map" width="28" height="30"/>
+        <image name="generic_btn_refresh" width="31" height="30"/>
     </resources>
 </document>
