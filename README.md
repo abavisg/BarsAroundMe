@@ -12,8 +12,13 @@ It has 2 views, a list view and a map view. The list view refreshes by natively 
 Open BarsAroundMe.xcworkspace, chose BarsAroundMeWithLocation scheme and run in a simulator as I've already included a fake location with a .gpx file. Alternatively, choose BarsAroundMe scheme and run on a device (you will have to change the bundle id and signing provisioning profile to one that will allow that app to be installed in that device).
 
 #### Future work
+* Add alerts and improve user feedback on request and response
+* Improve API error handling
+* Add a check when coming from background to refresh the data
+* Add data caching with RealmSwift
+* Refactor API to use Alamofire's URLRequestConvertible Protocol
 * Remove storyboard and have the controllers and tab bar initializing programmatically
-* Decouple home view controller & view model with dependency injection (preferrably by using a DI framework like [Swinject](https://github.com/Swinject/Swinject "Swinject"))
+* Decouple home view controller & view model with dependency injection (preferably by using a DI framework like [Swinject](https://github.com/Swinject/Swinject "Swinject"))
 * Add more unit tests to increase code coverage
 * Add Jazzy documentation
 * Automate with fastlane
